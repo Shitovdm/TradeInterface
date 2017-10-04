@@ -1,6 +1,6 @@
 <?php
-/*	Скрипт удаляет ордер на покупку в стиме.
-*	на вход подается номер ордела, на выходе получаем статус(удален или нет).
+/*
+	Delete buy order in Steam.
 */
 $order_number = $_POST['torder_number'];
 session_start();
