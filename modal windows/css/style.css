@@ -1,0 +1,64 @@
+.cursor-position{
+	position:absolute;
+}
+.container{
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	border:1px solid #666;
+	border-radius:3px;
+	width:300px;
+	position:absolute;
+	top:5px;
+	left:500px;
+}
+
+.container .top-panel{
+	width:100%;
+	height:30px;
+	float:left;
+	background-color:#666;
+}
+
+.container .top-panel .move-icon{
+	position:relative;
+	top:2px;
+	left:2px;
+	cursor:pointer;
+}
+.container .top-panel .hide-icon{
+	color:#fff;
+	position:relative;
+	top:-3px;
+	left:5px;
+	cursor:pointer;
+	font-size:20px;
+}
+.container .top-panel b{
+	float:right;
+	margin:5px;
+	margin-right:170px;
+	color:#fff;
+	font-size:16px;
+}
+
+#first_content{
+	display:block;
+}
+
+.container .content{
+	float:left;
+	width:100%;
+	color:#000;
+}
+
+.container .content{
+	text-align:center;
+}
+
+.container .content p{
+	margin:5px;
+	margin-bottom:10px;
+	color:#808080;
+}
+.clear{	
+	clear:both;
+}
