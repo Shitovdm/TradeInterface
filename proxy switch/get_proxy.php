@@ -14,12 +14,19 @@ function get_steam_prices($market_hash_name,$proxy){
 	curl_close($inv);
 	return $output_curl;		
 }
+function cut_priceSteam($priceSt){
+	$priceSt = substr($priceSt,0,-7);
+	$priceSt = str_replace(",", ".", $priceSt);
+	$priceSt = number_format($priceSt, 2, '.', '');
+	return $priceSt;
+}
 function parse_steam_answer($steam_answer){
+	$steam_answer = json_decode($steam_answer);
 	$data = array(
-		'success' => $steam_answer->success,
-		'lowest_price' => $steam_answer->lowest_price,
-		'volume' => $steam_answer->volume,
-		'median_price' => $steam_answer->median_price
+		"success" => $steam_answer->success,
+		"lowest_price" => cut_priceSteam($steam_answer->lowest_price),
+		"volume" => $steam_answer->volume,
+		"median_price" => cut_priceSteam($steam_answer->median_price)
 	);
 	return $data;
 }
@@ -59,18 +66,21 @@ function parse_into_array($string){
 	}
 	return $proxy;
 }
+// Resources of free proxy API.
+$proxy_resource[0] = "https://api.getproxylist.com/proxy";
+$proxy_resource[1] = "http://gimmeproxy.com/api/getProxy";
 
 $market_hash_name = "AK-47%20%7C%20Blue%20Laminate%20%28Factory%20New%29";
 $proxy_list  = read_proxy_list();
 $proxy_array = parse_into_array($proxy_list);
-for($i = 0; $i < count($proxy_array)-1; $i++){
+for($i = 0; $i < count($proxy_array)-2; $i++){
 	$steam_answer = get_steam_prices($market_hash_name,$proxy_array[$i]);
-	echo("steam_answer: " . $steam_answer."<br>");
+	//echo("steam_answer: " . $steam_answer."<br>");
 	$data = parse_steam_answer($steam_answer);
-	echo($data.success . "<br>");
-	if($data->success == "true"){
-		if( ($data->median_price != "") && (isset($data->median_price)) ){
-			echo("Median: " . $data->median_price . "; Lowest: " . $data->lowest_price . "; Volume: " . $data->volume . "<br>");
+	//echo($data["lowest_price"] . "<br>");
+	if($data["success"]){
+		if( ($data["lowest_price"] != "") && (isset($data["lowest_price"])) ){
+			echo("Median: " . $data["median_price"] . "; Lowest: " . $data["lowest_price"] . "; Volume: " . $data["volume"] . "<br>");
 			break;
 		}else{
 			// Bad marker hash name	
