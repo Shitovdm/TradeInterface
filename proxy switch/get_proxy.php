@@ -5,13 +5,14 @@ function get_steam_prices($market_hash_name,$proxy){
 	$market_hash_name_link = str_replace(")", "%29", $market_hash_name_link);
 	$url = "http://steamcommunity.com/market/priceoverview/?country=RU&currency=5&appid=730&market_hash_name=" . $market_hash_name_link;
 	$inv = curl_init($url);
-	//curl_setopt($inv, CURLOPT_PROXY, $proxy);
+	curl_setopt($inv, CURLOPT_PROXY, $proxy);
 	curl_setopt($inv, CURLOPT_USERAGENT, 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322)');
 	curl_setopt($inv, CURLOPT_HEADER, false);
 	curl_setopt($inv, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($inv, CURLOPT_TIMEOUT, 3);
 	$output_curl = curl_exec($inv);
 	curl_close($inv);
+	echo($proxy . "<br>");
 	return $output_curl;		
 }
 function cut_priceSteam($priceSt){
@@ -73,25 +74,27 @@ $proxy_resource[1] = "http://gimmeproxy.com/api/getProxy";
 $market_hash_name = "AK-47%20%7C%20Blue%20Laminate%20%28Factory%20New%29";
 $proxy_list  = read_proxy_list();
 $proxy_array = parse_into_array($proxy_list);
-for($i = 0; $i < count($proxy_array)-2; $i++){
+for($i = 0; $i < count($proxy_array); $i++){
 	$steam_answer = get_steam_prices($market_hash_name,$proxy_array[$i]);
 	//echo("steam_answer: " . $steam_answer."<br>");
 	$data = parse_steam_answer($steam_answer);
 	//echo($data["lowest_price"] . "<br>");
 	if($data["success"]){
 		if( ($data["lowest_price"] != "") && (isset($data["lowest_price"])) ){
+			echo("Responce obtained by  <b>" . $i . "</b> step. ");
 			echo("Median: " . $data["median_price"] . "; Lowest: " . $data["lowest_price"] . "; Volume: " . $data["volume"] . "<br>");
 			break;
 		}else{
+			echo("Bad get paraneters.<br>");
 			// Bad marker hash name	
 		}
 	}else{
-		// Bad proxy.	
+		echo("Bad proxy server.<br>");
+		// Bad proxy.
 	}
 	//echo($proxy_array[$i] . "<br>");
 }
 
-
-echo(read_proxy_list());
+echo("<br>" . read_proxy_list());
 //echo(get_proxy());
 ?>
