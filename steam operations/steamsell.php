@@ -49,14 +49,7 @@ if((count($assetid)-5) <= 0){
 	$steamsell_log = "<p>[" . $date . "] The list of items is empty or error uploading inventory.</p>";
 }
 //ограничиваем количество одновременно выставляемых вещей до 5 штук.
-if(count($assetid) > 5){
-	if(count($assetid) < 10){
-		$iter =	count($assetid)-5;
-	}else{
-		$iter = 5;//разкоментить
-		//$iter = 1;
-	}
-}
+if(count($assetid) > 5){ if(count($assetid) < 10){ $iter =	count($assetid)-5; }else{ $iter = 5;} }
 // Читаем список сохраненных предметов.
 $exception_items = file_get_contents('../lists/remember_items.txt');
 $i = 0;
@@ -100,7 +93,6 @@ for($j = 0; $j < $iter; $j++){
 			'amount' => '1',
 			'price' => $price
 		);
-		
 		for($a = 0; $a < 10; $a++){
 			$c = curl_init();
 			curl_setopt($c, CURLOPT_HEADER, false);
@@ -123,7 +115,6 @@ for($j = 0; $j < $iter; $j++){
 				break;
 			}
 		}
-	
 		$item_info = $market_hash_name[$j] . "; At price: " . ($price/100) . " rub. Assetid: " . $assetid[$j];
 		//The error handler.
 		if(($res->success) != 1){//Errors
@@ -154,7 +145,6 @@ for($j = 0; $j < $iter; $j++){
 		$steamsell_log .= "<p>[" . $date . "]" . " Item : " . $market_hash_name[$j] . "; Server response: Sale of the item is prohibited by the '<a href='#' target='_blank'>Stored items</a>' list.</p>";
 	}
 }
-
 
 $JSON_responce = array(
 	'steamsell_log' => $steamsell_log,
