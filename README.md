@@ -1,4 +1,6 @@
-![PriceHelper](https://raw.githubusercontent.com/Shitovdm/TradeInterface/images/image.png) #TradeInterface  
+<h1 align="center">
+  <img  src="https://raw.githubusercontent.com/Shitovdm/TradeInterface/master/images/logoTRADE2.PNG" width="300" />
+</h1>
 ***  
 
 **The project was canceled because of the innovations in the Steam exchange system. Now all the source files are available for free editing.**  
@@ -41,10 +43,9 @@ The entire functionality of the project is divided into several broken logical p
 - Profile;  
 The interface is not simple and can cause difficulties with the first experience of use.  
 
-<h3>Database</h3>
+<h3>Resources:</h3>
 
-
-<h3>Resources:</h3>  
 >> **https://market.csgo.com/docs/** - CSGO.tm open API.  
 >> **https://github.com/SmItH197/SteamAuthentication** - PHP Steam Auth.  
 >> **https://github.com/Jessecar96/SteamDesktopAuthenticator/releases** - Steam Desktop Authenticator.  
+
