@@ -1,0 +1,16 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	text-align: center;
+	width: 100%;
+}
+#defaultCanvas0{
+	z-index:-1;
+	animation-delay: 200ms;
+	animation-duration: 600ms;
+	animation-timing-function: ease-in-out;
+	border-bottom:2px solid #cdcdcd;
+}

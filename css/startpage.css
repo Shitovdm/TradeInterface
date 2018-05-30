@@ -1,0 +1,239 @@
+body{
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+.animation-chart{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:380px;
+	z-index:1;
+}
+.landing-page{
+	z-index:2;
+	margin-top:120px;
+}
+.clear{
+	clear:both;
+}
+.start-page-container{
+	position: relative;
+    max-width: 680px;
+    margin: 0 auto;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 30px 60px;
+    background-color: #FFFFFF;	
+}
+.start-page-content{
+	text-align:center;
+}
+@font-face {
+	font-family: FARRAY;
+	src: local("FARRAY"), url(../fonts/FARRAY.otf);
+}
+.hero-title{
+	font-family: FARRAY;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;	
+}
+.hero-subtitle{
+	margin-top:40px;
+	font-family: "proxima-nova-soft", sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+.start-page-container hr{
+	display: block;
+    max-width: 50%;
+    margin: 40px auto;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #E7E9ED;
+    box-sizing: content-box;
+    height: 0;	
+}
+.hero-button-wrapper {
+    padding: 20px 0;
+}
+.hero-button-wrapper .button{
+	width: 130px;
+    border: 0;
+    text-align: center;
+    display: inline-block;
+    padding: 8px;
+    margin: 8px;
+    color: #FFFFFF;
+    border-radius: 8px;
+    font-family: "proxima-nova-soft", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    transition: box-shadow 200ms ease-out;
+	font-size:19px;
+}
+
+.hero-button-wrapper .button:hover{
+  transform: scale(1.1);
+  transition: All 0.25s;  
+}
+.button-red {
+    background-color: #FF6384;
+}
+.button-blue {
+    background-color: #36A2EB;
+}
+.button-black {
+    background-color: #333538;
+}
+
+.fade-in {
+	animation-delay: 0ms;
+	animation-duration: 100ms;
+    animation-name: ease-in-out;
+}
+.fadeIn{
+	animation-delay: 0ms;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+}
+.fade-in, .fade-in-up {
+    animation-fill-mode: forwards;
+    animation-duration: 5000ms;
+    animation-timing-function: ease-in-out;
+}
+.animated{
+	animation-delay: 200ms;
+	animation-duration: 600ms;
+	animation-timing-function: ease-in-out;
+}
+.feature-container{
+	margin-bottom: 40px;
+}	
+.pill{
+	float:left;
+    background-color: #4BC0C0;
+	margin-top: 0px;
+	margin-right:20px;
+    padding: 8px;
+	padding-left:12px;
+	padding-right:12px;
+    font-size: 15px;
+	display: inline-block;
+    vertical-align: middle;
+    color: #FFFFFF;
+    border-radius: 8px;
+	font-weight:500;
+	font-size: 19px;
+	font-family: "proxima-nova-soft", sans-serif;
+}
+.pill:hover{
+  	transition: All 0.25s;
+	background-color: #42a5a5;
+}
+.feature-text{
+    width: 50%;
+	vertical-align: middle;
+}
+.float-left{
+	float: left;
+}
+.float-right{
+	float: right;
+}
+
+.feature-title{
+	font-family: "proxima-nova-soft", sans-serif;
+}
+.feature-text h3{
+	color:#333538;
+	font-family: "proxima-nova-soft", sans-serif;
+	padding:inherit;
+	float:left;
+	/*width:60%;*/
+	text-align:left;
+	margin:0;
+	margin-bottom:10px;
+	margin-top:7px;
+}
+.feature-text p{
+	color: #808080;
+	text-align:left;
+	display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+	font-weight: 300;
+    line-height: 1.5;
+    font-family: "proxima-nova-soft", sans-serif;
+}
+.feature-image{
+    width: 50%;
+	max-height:200px;
+	text-align:center;
+}
+.feature-small{
+	width:20.2%;
+	margin:15px;
+	float:left;
+	font-family: "proxima-nova-soft", sans-serif;
+}
+.feature-small-title{
+	top:5px;
+	font-size:15px;
+	color:#333538;
+}
+.feature-small-description{
+	font-size:14px;
+	color: #808080;
+	text-align:central;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+	font-weight: 300;
+    font-family: "proxima-nova-soft", sans-serif;
+}
+.start-page-footer{
+	margin:0 auto;
+	margin-top:30px;
+	max-width:680px;
+	text-align:center;	
+}
+.footer-note{
+	font-family: "proxima-nova-soft", sans-serif;
+    font-weight: 600;
+	display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+#first-block{
+	padding-top:10px;
+}
+#second-block{
+	padding-top:20px;
+}
+#third-block{
+	padding-top:25px;
+}
+#fourth-block{
+	padding-top:20px;
+}
+#fifth-block{
+	padding-top:25px;
+}
+a {
+	color: #36A2EB;
+    text-decoration: none;
+    border-bottom: 1px solid #36A2EB;
+}
+/*Анимации*/
+.hidden{
+	opacity:0;
+}
+.visible{
+	opacity:1;
+}

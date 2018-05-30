@@ -1,0 +1,103 @@
+body{
+	   background: url(../images/bg2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+@font-face {
+	font-family: FARRAY;
+	src: local("FARRAY"), url(../fonts/FARRAY.otf);
+}
+.login-logo b{
+	width:100%;	
+	float:left;
+	margin-bottom:40px;
+	font-family: FARRAY;
+	font-size:17px;
+}
+.login-page{
+	max-width: 300px;
+    z-index: 100;
+    margin: 0 auto;
+    padding-top: 150px;
+	text-align:center;
+	
+	color: #676a6c;
+	font-family: 'Open Sans',sans-serif;
+    font-style: normal;
+	font-size: 13px;
+}
+.login-screen{
+	width:300px;
+	margin:0 auto;
+}
+.login-screen h3{
+	margin-bottom:7px;
+}
+.input_field{
+	width: 100%;
+	margin-bottom:10px;
+}
+.input_field input{
+	background-color: #FFF;
+    background-image: none;
+    border: 1px solid #e5e6e7;
+    border-radius: 1px;
+    color: inherit;
+    display: block;
+    padding: 6px 12px;
+    -webkit-transition: border-color .15s ease-in-out 0s,box-shadow .15s ease-in-out 0s;
+    transition: border-color .15s ease-in-out 0s,box-shadow .15s ease-in-out 0s;
+    width:274px;
+    font-size: 14px;
+}
+.input_field button{
+	background-color: #18a689;
+    border-color: #18a689;
+    color: #FFF;
+	width:100%;
+	height:30px;
+	text-indent: 0px;
+    text-shadow: none;
+	overflow: visible;
+	border: 1px solid transparent;
+	border-radius:4px;
+	cursor:pointer;
+}
+.input_field button:hover{
+	color: #fff;
+    background-color: #18a659;
+    border-color: #18a659;
+}
+.incorrect-data{
+	width:300px;
+	padding-top:15px;
+	padding-bottom:15px;
+	color: #a94442;
+    background-color: #f2dede;
+	border:1px solid #ebccd1;
+	margin-bottom: 10px;
+	text-align: center;
+	font-family: 'Open Sans',sans-serif;
+    font-style: normal;
+	font-weight:200;
+	font-size: 13px;
+}
+
+.login-capcha{
+	
+}
+.login-capcha input{
+	height:30px;
+	width:100px;
+	float:left;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+	margin-left: 15px;
+}
+.login-capcha img{
+	float:right;
+	margin-right:15px;
+	margin-bottom:10px;
+}
