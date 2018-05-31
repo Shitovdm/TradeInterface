@@ -152,16 +152,12 @@
 
 <script>
 $(document).ready(function() {
-	$('#defaultCanvas0').addClass("animated fadeIn");
-	$('.start-page-container').addClass("animated fadeIn");
-	$('.post').addClass("hidden").viewportChecker({
-	classToAdd: 'visible fadeIn',
-	repeat: true,
-	offset: 50
-	});
+        $('#defaultCanvas0').addClass("animated fadeIn");
+        $('.start-page-container').addClass("animated fadeIn");
+        $('.post').addClass("hidden").viewportChecker({
+        classToAdd: 'visible fadeIn',
+        repeat: true,
+        offset: 50
+        });
 });
 </script>
-<?php
-
-
-?>
