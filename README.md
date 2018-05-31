@@ -1,9 +1,8 @@
 <h1 align="center">
   <img  src="https://raw.githubusercontent.com/Shitovdm/TradeInterface/master/images/logoTRADE2.PNG" width="300" />
 </h1>
-***  
 
-**The project was canceled because of the innovations in the Steam exchange system. Now all the source files are available for free editing.**  
+**The project was canceled because of the innovations in the Steam exchange system. Now all the source files are available for free editing. Сode is formatted and all comments and confidential data are deleted.**  
 
 The project was created to automate trade on trading platforms of game items. It is implemented in the form of an interface in which it is convenient to regulate the process of buying and selling items.  
 
