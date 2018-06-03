@@ -44,7 +44,7 @@ The interface is not simple and can cause difficulties with the first experience
 
 <h3>Resources:</h3>
 
->> **https://market.csgo.com/docs/** - CSGO.tm open API.  
->> **https://github.com/SmItH197/SteamAuthentication** - PHP Steam Auth.  
->> **https://github.com/Jessecar96/SteamDesktopAuthenticator/releases** - Steam Desktop Authenticator.  
+> **https://market.csgo.com/docs/** - CSGO.tm open API.  
+> **https://github.com/SmItH197/SteamAuthentication** - PHP Steam Auth.  
+> **https://github.com/Jessecar96/SteamDesktopAuthenticator/releases** - Steam Desktop Authenticator.  
 
